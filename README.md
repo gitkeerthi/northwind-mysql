@@ -42,17 +42,22 @@ mysql> source [/path/to/]northwind-mysql.sql
 $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@dmin!234' -p 1433:1433 --name mssql -h mssql -d mcr.microsoft.com/mssql/server
 ```
 
-3. Note the credentials. User ID is `SA`. Password is `@dmin!234`
+3. Note the credentials. User ID is `SA`. Password is `@dmin!234`.
 
 4. Install [Azure Data Studio for Mac](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
 
-5. Login to Azure Data Studio and follow the steps in the following screenshots:
+5. Follow the steps below:
+   
+    - Login to Azure Data Studio:
+      ![Login](images/login.png)
+      
     - Go to Databases -> master -> right-click -> New query and run the following command:
       ```
       CREATE DATABASE Northwind
       ```
       ![Create-New-DB](images/new-db.png)
       
-    - Refresh the tree on the left, find Northwind under Databases -> right-click -> New query and run the contents of the file northwind-ms-sql-server.sql:
+    - Refresh the tree on the left, find Northwind -> right-click -> New query and run the contents of the file northwind-ms-sql-server.sql:
       ![Run-Script](images/run-script.png)
     
+   - Refresh the tree again to reveal the tables created.
