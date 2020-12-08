@@ -1,7 +1,10 @@
-# Northwind MySQL
-MySQL version of Northwind database used in the book [SQL Practice Problems](https://www.amazon.com/SQL-Practice-Problems-learn-doing/dp/1520807635) Book.
+# How to setup SQL Practice Problems database on any platform - works on Mac, Windows, Linux
 
+Credits: [SQL Practice Problems](https://www.amazon.com/SQL-Practice-Problems-learn-doing/dp/1520807635) Book.
+
+Based on the following publication:
 ```text
+Title: SQL Practice Problems: 57 beginning, intermediate, and advanced challenges for you to solve using a “learn-by-doing” approach
 Edition: Kindle
 Publication date: November 16, 2016
 ASIN: B01N41VQFO
