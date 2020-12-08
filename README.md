@@ -27,7 +27,7 @@ mysql> drop database if exists Northwind;
 mysql> create database Northwind;
 ```
 
-3. Import northwind.sql
+3. Import northwind-mysql.sql
 
 ```mysql
 mysql> source [/path/to/]northwind-mysql.sql
