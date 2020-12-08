@@ -1,6 +1,6 @@
 # How to setup SQL Practice Problems database on any platform - works on Mac, Windows, Linux
 
-Credits: [SQL Practice Problems](https://www.amazon.com/SQL-Practice-Problems-learn-doing/dp/1520807635) Book.
+Credits: [SQL Practice Problems](https://www.amazon.com/SQL-Practice-Problems-learn-doing/dp/1520807635).
 
 Based on the following publication:
 ```text
@@ -54,9 +54,9 @@ $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@dmin!234' -p 1433:1433 --name m
 
 4. Install [Azure Data Studio for Mac](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
 
-5. Follow the steps below:
+5. Login to Azure Data Studio and set up the database:
    
-    - Login to Azure Data Studio:
+    - Login:
       ![Login](images/login.png)
       
     - Go to Databases -> master -> right-click -> New query and run the following command:
