@@ -9,9 +9,14 @@ ASIN: B01N41VQFO
 
 ## Why did I create this?
 The original scripts shipped with the **Kindle edition** of the book I bought off Amazon was compatible with only 
-Windows/SQL Server. I reverse-engineered the scripts to make it work on my Mac/MySQL.
+Windows/SQL Server. I needed a way to run the scripts on my Mac. I came up with two solutions:
 
-## Setting up on Mac and MySQL
+**Option 1:** Port the scripts to work on MySQL.
+**Option 2:** Run Microsoft SQL Server  as a Docker container.
+
+Both the options are cross-platform!
+
+## Option 1: Setting up on Mac and MySQL
 
 1. Login to MySQL
 ```mysql
@@ -30,10 +35,10 @@ mysql> create database Northwind;
 3. Import northwind-mysql.sql
 
 ```mysql
-mysql> source [/path/to/]northwind-mysql.sql
+mysql> source [/path/to/]northwind-mysql.sql;
 ```
 
-## Setting up on Mac and Microsoft SQL Server
+## Option 2: Setting up on Mac and Microsoft SQL Server
 
 1. Install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 
