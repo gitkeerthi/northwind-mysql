@@ -15,7 +15,7 @@ The original scripts shipped with the **Kindle edition** of the book I bought of
 Windows/SQL Server. I needed a way to run the scripts on my Mac. I came up with two solutions:
 
 **Option 1:** Port the scripts to work on MySQL.
-**Option 2:** Run Microsoft SQL Server  as a Docker container.
+**Option 2:** Run Microsoft SQL Server as a Docker container.
 
 Both the options are cross-platform!
 
@@ -28,11 +28,11 @@ $ mysql -h localhost -P 3306 --protocol=tcp -u root -p
 
 2. Re-create database
 ```mysql
-mysql> drop database if exists Northwind;
+mysql> drop database if exists northwind;
 ```
 
 ```mysql
-mysql> create database Northwind;
+mysql> create database northwind;
 ```
 
 3. Import northwind-mysql.sql
@@ -40,6 +40,7 @@ mysql> create database Northwind;
 ```mysql
 mysql> source [/path/to/]northwind-mysql.sql;
 ```
+You'll notice the tables and column names are in snake_case per MySQL convention.
 
 ## Option 2: Setting up on Mac and Microsoft SQL Server
 
