@@ -14,30 +14,30 @@ ASIN: B01N41VQFO
 The original scripts shipped with the **Kindle edition** of the book I bought off Amazon was compatible with only 
 Windows/SQL Server. I needed a way to run the scripts on my Mac. I came up with two solutions:
 
-**Option 1:** Port the scripts to work on MySQL.
-**Option 2:** Run Microsoft SQL Server as a Docker container.
+- **Option 1:** Port the scripts to work on MySQL.
+- **Option 2:** Run Microsoft SQL Server as a Docker container.
 
 Both the options are cross-platform!
 
 ## Option 1: Setting up on Mac and MySQL
 
 1. Login to MySQL
-```mysql
+```bash
 $ mysql -h localhost -P 3306 --protocol=tcp -u root -p
 ```
 
 2. Re-create database
-```mysql
+```bash
 mysql> drop database if exists northwind;
 ```
 
-```mysql
+```bash
 mysql> create database northwind;
 ```
 
 3. Import northwind-mysql.sql
 
-```mysql
+```bash
 mysql> source [/path/to/]northwind-mysql.sql;
 ```
 You'll notice the tables and column names are in snake_case per MySQL convention.
@@ -47,7 +47,7 @@ You'll notice the tables and column names are in snake_case per MySQL convention
 1. Install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 
 2. Start MS SQL Server as a Docker container
-```
+```bash
 $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@dmin!234' -p 1433:1433 --name mssql -h mssql -d mcr.microsoft.com/mssql/server
 ```
 
@@ -61,7 +61,7 @@ $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@dmin!234' -p 1433:1433 --name m
       ![Login](images/login.png)
       
     - Go to Databases -> master -> right-click -> New query and run the following command:
-      ```
+      ```bash
       CREATE DATABASE Northwind
       ```
       ![Create-New-DB](images/new-db.png)
