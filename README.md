@@ -55,18 +55,13 @@ $ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=@dmin!234' -p 1433:1433 --name m
 
 4. Install [Azure Data Studio for Mac](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio)
 
-5. Login to Azure Data Studio and set up the database:
+5. Set up the database in MS SQL Server:
    
-    - Login:
-      ![Login](images/login.png)
-      
-    - Go to Databases -> master -> right-click -> New query and run the following command:
+    - Login to Azure Data Studeo
+    - Launch 'New query' and run the following command:
       ```bash
       CREATE DATABASE Northwind
       ```
-      ![Create-New-DB](images/new-db.png)
-      
-    - Refresh the tree on the left, find Northwind -> right-click -> New query and run the contents of the file northwind-ms-sql-server.sql:
-      ![Run-Script](images/run-script.png)
-    
-   - Refresh the tree again to reveal the tables created.
+    - Refresh the tree on the left to reveal Northwind.
+    - Launch 'New query' and run the contents of the file northwind-ms-sql-server.sql.
+    - Refresh the tree again to reveal the tables created.
